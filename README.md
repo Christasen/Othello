@@ -1,0 +1,2 @@
+# Othello
+An Interactive Game
