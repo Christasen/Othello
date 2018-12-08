@@ -1,2 +1,7 @@
 # Othello
-An Interactive Game
+
+## Run
+```
+Python3 program.py -h
+
+```
