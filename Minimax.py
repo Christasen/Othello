@@ -1,19 +1,12 @@
 import numpy
 import math
+import copy
+from utility import nextn, getvalidMoves, isValidMove, oppon, count
 
-def oppon(row, col, board, color):
-    oppon1 = []
-    for u in [-1,0,1]:
-        for v in [-1,0,1]:
-            if row + u >= 0 and col + v >= 0 and row + u < len(board) and col + v < len(board)\
-            and board[row+u][col+v] == -color:
-                oppon1.append([u,v])
-    return oppon1
-
-def flip(move, board, color):
+def flip(move, old_board, color):
     [row, col] = move
-    oppon3 = []
-    oppon3 = oppon(row,col,board,color)
+    board = copy.deepcopy(old_board)
+    oppon3, _ = oppon(row,col,board,color)
     for el in oppon3:
         u = el[0]
         v = el[1]
