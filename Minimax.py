@@ -1,3 +1,7 @@
+# Created by Guangyu Yan at 10/10/2017
+# Modified by Thomas Shen at 04/29/2019
+# All rights reserved.
+
 import numpy
 import math
 import copy
