@@ -131,7 +131,9 @@ def flip(row,col,board,color):
 ### selectNewplay computer's funtion
 def selectNextPlay(board):
     alist = getvalidMoves(board,1)
-    [x, y] = MinimaxDecision(copy.deepcopy(board), alist, 1)
+    result = MinimaxDecision(copy.deepcopy(board), alist, 1)
+    if result == None: return
+    [x, y] = result
     board[x][y] = 1
     move(x,y,board)
     flip(x,y,board,1)
